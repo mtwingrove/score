@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>ScoreCard</title>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="apple-mobile-web-app-capable" content="no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="./jquery-cookie.js"></script>
+	<script src="./score.js"></script>
+	<link rel="stylesheet" href="./score.css">
+	<link rel="stylesheet" href="../assets/css/font-awesome.min.css">
+</head>
+<body>
+	<script>
+	window.onbeforeunload = function() {
+    	return "Are you sure you want to leave? Scores are not saved.";
+	}
+	</script>
+<div id="scorecard">
+<!-- Header -->
+	<img style="display:inline" src="pig.png"></img>
+	<hr>
+	<div class="ScoreCardTable" >
+	<!-- Scores Table -->
+			<table id="sTable" class="editabletable" border="1">
+		<tr>
+		  <td><div id="player1name" contenteditable>&nbsp</div></td>
+		  <td><div id="player2name" contenteditable>&nbsp</div></td>
+		  <td><div id="player3name" contenteditable>&nbsp</div></td>
+		</tr>
+		<tr>
+		  <td><input id="p1first" class="player1" size="4" type="text" pattern="[0-9]*" /></td>
+		  <td><input id="p2first" class="player2" size="4" type="text" pattern="[0-9]*" /></td>
+		  <td><input id="p3first" class="player3" size="4" type="text" pattern="[0-9]*" /></td>
+		  
+		</tr>
+	  </table>
+	  <div class="tButtonAddFirst" onclick="addRow()">+</div>
+	<!-- Totals table -->
+	<div>
+		<table id="tTable" class="editabletable" border="0">
+			<tr>
+			  <td><div class="sButton" id="p1total">0</div></td>
+			  <td><div class="sButton" id="p2total">0</div></td>
+			  <td><div class="sButton" id="p3total">0</div></td>
+			</tr>
+			 <tr>
+			  <td><div class="pigout" id="po1">Pig Out</div></td>
+			  <td><div class="pigout" id="po2">Pig Out</div></td>
+			  <td><div class="pigout" id="po3">Pig Out</div></td>
+			</tr>
+	  </table>
+	  <div id="test"></div>
+	  <div style="background-color:#9b59b6;color:white;"><a href="#" onclick="newGame()">New Game</a></div>
+	</div>
+	</div>
+</div>
+
+</body>
+</html>
