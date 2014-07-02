@@ -120,22 +120,7 @@ function updateScores(){
 	$.cookie('player3', player3name, { expires: 30 });
 }
 function findWinner(){
-
-	var p1 = document.getElementById("p1total").innerHTML;
-	var p2 = document.getElementById("p1total").innerHTML;
-	var p3 = document.getElementById("p1total").innerHTML;	
-	
-	var winner = p1;
-	
-	if (p2>p1){
-		winner = p2;
-	}
-	
-	if (p3>winner){
-		winner = p3;
-	}
-
-	//document.getElementById("test").innerHTML = winner;
+//Nothing yet...
 }
 function deleteRow(row)
 {
